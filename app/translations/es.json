@@ -1,0 +1,23 @@
+{
+  "call_us": "Llámanos",
+  "phone_number": "+77363563882992",
+  "my_account": "Mi Cuenta",
+  "login": "Iniciar Sesión",
+  "sign_up": "Registrarse",
+  "my_cart": "Mi Carrito",
+  "checkout": "Pagar",
+  "usd": "USD",
+  "english": "Inglés",
+  "spanish": "Español",
+  "french": "Francés",
+  "greek": "Griego",
+  "german": "Alemán",
+  "lucky_spinner": "Giro de la Suerte",
+  "subscribe_newsletter": "Suscríbete al boletín para recibir actualizaciones sobre nuevos productos.",
+  "spin": "GIRAR",
+  "spinning": "Girando...",
+  "continue": "CONTINUAR",
+  "spins_left": "GIRO {{count}} restantes",
+  "congratulations": "¡Felicidades! Ganaste {{prize}}",
+  "loading_products": "Cargando productos..."
+}

@@ -11,7 +11,7 @@ export default function Subscribe() {
   return (
     <>
     {showPopup &&
-      <section className="flex justify-center items-center bg-[#0000004e] fixed w-screen h-screen p-2">
+      <section className="flex justify-center items-center bg-[#0000004e] fixed w-screen h-screen p-2 z-30">
         <div className="bg-[#ffff] flex rounded-2xl relative w-fit items-center justify-center p-7 h-fit">
           <div className="flex flex-col">
             <span>

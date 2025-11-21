@@ -1,0 +1,23 @@
+{
+  "call_us": "Appelez-nous",
+  "phone_number": "+77363563882992",
+  "my_account": "Mon Compte",
+  "login": "Connexion",
+  "sign_up": "S'inscrire",
+  "my_cart": "Mon Panier",
+  "checkout": "Paiement",
+  "usd": "USD",
+  "english": "Anglais",
+  "spanish": "Espagnol",
+  "french": "Français",
+  "greek": "Grec",
+  "german": "Allemand",
+  "lucky_spinner": "Roue de la Chance",
+  "subscribe_newsletter": "Abonnez-vous à la newsletter pour recevoir des mises à jour sur les nouveaux produits.",
+  "spin": "TOURNER",
+  "spinning": "En cours...",
+  "continue": "CONTINUER",
+  "spins_left": "TOURNER {{count}} restants",
+  "congratulations": "Félicitations ! Vous avez gagné {{prize}}",
+  "loading_products": "Chargement des produits..."
+}

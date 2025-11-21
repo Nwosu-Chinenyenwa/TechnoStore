@@ -1,0 +1,23 @@
+{
+  "call_us": "Καλέστε μας",
+  "phone_number": "+77363563882992",
+  "my_account": "Ο Λογαριασμός μου",
+  "login": "Σύνδεση",
+  "sign_up": "Εγγραφή",
+  "my_cart": "Το Καλάθι μου",
+  "checkout": "Ολοκλήρωση",
+  "usd": "USD",
+  "english": "Αγγλικά",
+  "spanish": "Ισπανικά",
+  "french": "Γαλλικά",
+  "greek": "Ελληνικά",
+  "german": "Γερμανικά",
+  "lucky_spinner": "Τυχερός Στροφέας",
+  "subscribe_newsletter": "Εγγραφείτε στο newsletter για να λαμβάνετε ενημερώσεις για νέα προϊόντα.",
+  "spin": "ΠΕΡΙΣΤΡΟΦΗ",
+  "spinning": "Περιστρέφεται...",
+  "continue": "ΣΥΝΕΧΕΙΑ",
+  "spins_left": "ΠΕΡΙΣΤΡΟΦΗ {{count}} αριστερά",
+  "congratulations": "Συγχαρητήρια! Κερδίσατε {{prize}}",
+  "loading_products": "Φόρτωση προϊόντων..."
+}

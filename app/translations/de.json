@@ -1,0 +1,23 @@
+{
+  "call_us": "Rufen Sie uns an",
+  "phone_number": "+77363563882992",
+  "my_account": "Mein Konto",
+  "login": "Anmelden",
+  "sign_up": "Registrieren",
+  "my_cart": "Mein Warenkorb",
+  "checkout": "Zur Kasse",
+  "usd": "USD",
+  "english": "Englisch",
+  "spanish": "Spanisch",
+  "french": "Französisch",
+  "greek": "Griechisch",
+  "german": "Deutsch",
+  "lucky_spinner": "Glücksrad",
+  "subscribe_newsletter": "Abonnieren Sie den Newsletter, um Updates über neue Produkte zu erhalten.",
+  "spin": "DREHEN",
+  "spinning": "Dreht sich...",
+  "continue": "WEITER",
+  "spins_left": "DREHEN {{count}} übrig",
+  "congratulations": "Herzlichen Glückwunsch! Sie haben {{prize}} gewonnen",
+  "loading_products": "Produkte werden geladen..."
+}

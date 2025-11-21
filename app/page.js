@@ -5,6 +5,7 @@ import Image from "next/image";
 import logo from "../public/images/logo.png";
 import { useRouter } from "next/navigation";
 import Game from "./components/Game";
+import Nav from "./components/Nav";
 
 export default function Home() {
   const [load, setload] = useState(true);
