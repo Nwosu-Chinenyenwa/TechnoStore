@@ -8,7 +8,7 @@ import home4 from "../../public/images/home-05.jpg";
 export default function Images() {
   return (
     <section className="w-[90vw] m-auto py-10">
-      <div className="flex items-center gap-5">
+      <div className="flex items-center justify-center gap-5">
         <div className="max-w-[779.99px]">
           <div className="flex gap-5">
             <div className="relative overflow-hidden group cursor-pointer">

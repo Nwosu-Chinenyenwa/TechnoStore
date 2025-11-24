@@ -58,7 +58,7 @@ function Modiles() {
 
         <div className="flex p-10 items-center">
           <div className="group">
-            <div className="w-[40vw] h-[120vh] border-2 border-[#00000009] rounded-2xl flex items-center p-5  group">
+            <div className="max-w-[40vw] max-h-[120vh] border-2 border-[#00000009] rounded-2xl flex items-center p-5  group">
               <div className="p-2 rounded-[8px]">
                 <div>
                   <div className="w-[100%] relative">

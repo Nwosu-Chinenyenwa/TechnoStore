@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logo from "../../public/images/logo.png";
+import logo from "../../public/images/logo2.png";
 import pro1 from "../../public/images/01.jpg";
 import pro2 from "../../public/images/02.jpg";
 import pro3 from "../../public/images/03.jpg";
@@ -292,7 +292,7 @@ export default function Game() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
-      <Image src={logo} alt="logo" />
+      <Image className="w-[40vw] lg:w-[20vw]" src={logo} alt="logo" />
       <h1 className="text-[#2d2d2d] text-[25px] font-[400] py-2">Lucky Spinner</h1>
 
 

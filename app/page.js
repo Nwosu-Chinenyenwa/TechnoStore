@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../public/images/logo.png";
+import logo from "../public/images/logo2.png";
 import { useRouter } from "next/navigation";
 import Game from "./components/Game";
 import Nav from "./components/Nav";

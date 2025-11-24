@@ -22,7 +22,7 @@ li{
   --cloud-color: #f28b00;
   --arrows-color: #ff9307;
   --time-animation: 1s;
-  transform: scale(1); /* You can change the size */
+  transform: scale(1);
 }
 
 .loader #cloud {
@@ -109,4 +109,21 @@ li{
 
 .nunito{
     font-family: "Nunito", sans-serif;
+}
+
+
+/* banner */
+
+.bannerone{
+  background-image: url("../public/images/banner-narrow-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bannertwo{
+  background-image: url("../public/images/banner-narrow-02.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

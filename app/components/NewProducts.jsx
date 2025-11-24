@@ -41,7 +41,7 @@ export default function NewProducts() {
     },
     {
       id: 3,
-      img: product3,
+      img: product3,   
       title: "Computer",
       name: "Apple İmac Z0SC4824 Retina",
       price: "$5,759.68",
