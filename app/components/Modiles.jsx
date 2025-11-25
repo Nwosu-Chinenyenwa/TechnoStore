@@ -141,8 +141,8 @@ function Modiles() {
                       </span>
                     </li>
                   </ul>
-                  <div className="">
-                    <div className="flex items-center transition-all group-hover:opacity-100 justify-center flex-col mt-5 gap-2">
+                  <div className="md:group">
+                    <div className="flex items-center transition-all md:opacity-0 group-hover:opacity-100 justify-center flex-col mt-5 gap-2">
                       <button className="flex bg-[#f92400] hover:bg-[#f28b00] transition-all text-white gap-3 text-[20px] cursor-pointer font-[600] w-[80%] sm:w-[90%] md:w-[80%] items-center justify-center h-[45px] rounded-full">
                         <TiShoppingCart className="text-[25px]" />
                         <span>Add To Cart</span>
