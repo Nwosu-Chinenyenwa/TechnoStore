@@ -1,37 +1,122 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import { FaBagShopping } from "react-icons/fa6";
+import { MdShoppingCart, MdConnectWithoutContact } from "react-icons/md";
+import { IoBagCheckOutline, IoHome } from "react-icons/io5";
+import { SiAboutdotme } from "react-icons/si";
+import { RiServiceFill } from "react-icons/ri";
+import { FaQq } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 export default function Links() {
+  const [display, setdisplay] = useState(false);
   return (
-    <div className="bg-[#f28b00] px-10 py-3 flex justify-between">
-      <ul className="flex">
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Home
+    <>
+      <div className="bg-[#f28b00] px-1 pl-4 md:pl-0 md:px-10 py-3 relative items-center flex justify-between">
+        <ul className="hidden md:flex">
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Home
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            About
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Services
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Shop
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Cart
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Faq
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Checkout
+          </li>
+          <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
+            Contact
+          </li>
+        </ul>
+
+        <li onClick={() => setdisplay(!display)}>
+          {!display ? (
+            <FiMenu className="flex md:hidden border border-white text-white text-[40px] p-1" />
+          ) : (
+            <IoMdClose className="flex md:hidden border border-white text-white text-[40px] p-1" />
+          )}
         </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          About
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Services
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Shop
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Cart
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Faq
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Checkout
-        </li>
-        <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-          Contact
-        </li>
-      </ul>
-      <h6 className="uppercase text-[14px] font-[600] text-[#fff] cursor-pointer hover:underline">
-        Today's Deal
-      </h6>
-    </div>
+
+        <h6 className="uppercase text-[14px] font-[600] text-[#fff] cursor-pointer hover:underline">
+          Today's Deal
+        </h6>
+      </div>
+
+      {display && (
+        <div className="flex absolute z-50 md:hidden bg-[#222222] text-white">
+          <ul>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Home</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <IoHome />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>About</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <SiAboutdotme />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Services</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <RiServiceFill />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Faq</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <FaQq />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Shop</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <FaBagShopping />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Cart</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <MdShoppingCart />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Checkout</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <IoBagCheckOutline />
+              </span>
+            </li>
+            <li className="border-t border-[#333333] flex items-center justify-between w-[100vw] pl-5">
+              <span>Contact</span>
+              <span className="w-[51px] h-[50px] bg-[#333] flex items-center justify-center">
+                {" "}
+                <MdConnectWithoutContact />
+              </span>
+            </li>
+          </ul>
+        </div>
+      )}
+    </>
   );
 }

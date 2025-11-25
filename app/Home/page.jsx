@@ -13,6 +13,7 @@ import Imagebox from "../components/Imagebox";
 import MostSales from "../components/MostSales";
 import More from "../components/More";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 export default function page() {
   return (
@@ -22,12 +23,13 @@ export default function page() {
       <HeroSlider />
       <Images />
       <Banner/>
-      <NewProducts />
+{/*       <NewProducts />
       <ProductSlider />
       <Modiles />
       <Imagebox />
       <MostSales />
       <More />
+      <Footer/> */}
     </>
   );
 }

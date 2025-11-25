@@ -7,7 +7,7 @@ export default function Top() {
   const [myaccountOpen, setMyaccountOpen] = useState(0);
   return (
     <>
-      <section className="flex  flex-wrap justify-center gap-2 py-2 md:py-0 h-fit md:gap-0  md:h-[37px] text-[14px]  lg:px-10 lg:justify-between border-b border-[#f2890041] text-[#2d2d2d] items-center">
+      <section className="flex flex-col md:flex-row justify-center gap-5 sm:justify-between sm:px-3 py-2 md:py-0 h-fit md:gap-0  md:h-[37px] text-[14px]  lg:px-10 lg:justify-between border-b border-[#f2890041] text-[#2d2d2d] items-center">
         <div className="">
           <span className="text-[#f28b00]">Call Us</span>
           <a className="hover:text-[#f28b00] transition-all" href="tel:">

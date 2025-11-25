@@ -33,7 +33,7 @@ export default function More() {
     },
   ];
   return (
-    <section className="w-[90vw] m-auto py-20 flex gap-5 items-center justify-center border-b border-[#00000022]">
+    <section className="w-[90vw] m-auto py-20 flex gap-5 items-center justify-center ">
       {data.map((item, index) => (
         <div className="" key={index}>
           <div className="group flex items-center justify-center flex-col">

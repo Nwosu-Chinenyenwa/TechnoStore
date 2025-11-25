@@ -12,20 +12,20 @@ import { MdCompareArrows } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 import Cartdropdown from "./Cartdropdown";
 
-export default function Nav() {
+export default function Nav() { 
   const [display, setDisplay] = useState(0);
   const [love, setlove] = useState(false);
   const [cartdropdown, setcartdropdown] = useState(0);
   return (
     <>
-      <section className="flex flex-wrap justify-center gap-5 lg:justify-between items-center p-10">
-        <Image className="w-[20vw]" src={logo} alt="Logo" />
+      <section className="flex flex-col  md:flex-row p-5 justify-center gap-5 lg:justify-between items-center md:p-10">
+        <Image className="w-[60vw] md:w-[25vw] lg:w-[20vw]" src={logo} alt="Logo" />
 
-        <ul className="flex border-2 relative items-center pl-10 p-3 border-[#e5e5e5] active:border-[#d7d2d2] rounded-full gap-7">
-          <li className="relative px-2  hidden lg:block">
+        <ul className="flex border-2 w-[90vw] lg:w-fit justify-between md:justify-center md:w-fit relative items-center pl-10 p-3 border-[#e5e5e5] active:border-[#d7d2d2] rounded-full gap-7">
+          <li className="relative xl:px-2 hidden lg:block">
             <span
               onClick={() => setDisplay(display === 1 ? 0 : 1)}
-              className="flex items-center text-[#727272] border-r border-[#0000003a] px-5 cursor-pointer justify-center gap-1"
+              className="flex items-center text-[#727272] border-r border-[#0000003a] px-1 xl:px-5 cursor-pointer justify-center gap-1"
             >
               <span>All Category</span>
               <IoIosArrowDown />
@@ -84,7 +84,7 @@ export default function Nav() {
           </li>
           <li>
             <input
-              className="placeholder:text-[#919191] outline-none w-[20vw] px-2 text-[#727272]"
+              className="placeholder:text-[#919191] placeholder:text-[14px] outline-none w-full md:w-[20vw] px-2 text-[#727272]"
               type="text"
               placeholder="Search what you looking for?"
             />
@@ -115,7 +115,7 @@ export default function Nav() {
                 <TiShoppingCart className="text-[#33333374] text-[25px]" />
               </div>
 
-              <span className="text-[16px] font-medium text-[#2d2d2d]">
+              <span className="text-[16px] hidden md:block font-medium text-[#2d2d2d]">
                 $0.00
               </span>
             </div>

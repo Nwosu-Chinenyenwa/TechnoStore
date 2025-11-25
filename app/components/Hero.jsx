@@ -23,7 +23,7 @@ const slidesData = [
     id: 1,
     small: "Latest & Greatest",
     title: "CURVED OLED",
-     discription:
+    discription:
       "The ship set ground on the shore of this uncharted desert isle with Gilligan the Skipper too the millionaire and his story.",
     price: "$2,199.00",
     oldPrice: "$3,200.00",
@@ -34,7 +34,7 @@ const slidesData = [
     id: 2,
     small: "Latest & Greatest",
     title: "CURVED OLED",
-     discription:
+    discription:
       "The ship set ground on the shore of this uncharted desert isle with Gilligan the Skipper too the millionaire and his story.",
     price: "$2,199.00",
     oldPrice: "$3,200.00",
@@ -56,7 +56,7 @@ const slidesData = [
     id: 4,
     small: "Latest & Greatest",
     title: "CURVED OLED",
-     discription:
+    discription:
       "The ship set ground on the shore of this uncharted desert isle with Gilligan the Skipper too the millionaire and his story.",
     price: "$2,199.00",
     oldPrice: "$3,200.00",
@@ -67,14 +67,14 @@ const slidesData = [
     id: 5,
     small: "Latest & Greatest",
     title: "CURVED OLED",
-     discription:
+    discription:
       "The ship set ground on the shore of this uncharted desert isle with Gilligan the Skipper too the millionaire and his story.",
     price: "$2,199.00",
     oldPrice: "$3,200.00",
     badgeText: "30 %\nsale",
     image: hero4,
   },
-]; 
+];
 
 export default function HeroSlider({
   slides = slidesData,
@@ -124,7 +124,7 @@ export default function HeroSlider({
         ref={containerRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative bg-white  w-[90vw] xl:h-[80vh] lg:h-[50vh] flex items-center justify-center m-auto rounded-lg overflow-hidden shadow-sm"
+        className="relative bg-white w-[95vw] h-[40vh]  md:w-[90vw] xl:h-fit lg:h-[50vh] flex items-center justify-center m-auto rounded-lg overflow-hidden shadow-sm"
       >
         <div className="w-full max-w-[1200px] mx-auto">
           <div className="relative overflow-hidden">
@@ -138,12 +138,12 @@ export default function HeroSlider({
                   className="w-full flex-shrink-0 flex items-center justify-between gap-6"
                   style={{ minWidth: "100%" }}
                 >
-                  <div className="w-1/2 min-h-[350px]">
-                    <p className="text-[#919191] nunito text-[16px] ml-15">
+                  <div className="w-full min-h-[350px] md:w-1/2">
+                    <p className="text-[#919191] ml-5 text-[16px] md:ml-15">
                       {s.small}
                     </p>
 
-                    <h2 className="text-[70px] md:text-[70px] flex gap-2 leading-tight  ml-15 font-light nunito text-[#f28b00]">
+                    <h2 className="text-[40px] md:text-[70px]  ml-5 flex gap-2 leading-tight  md:ml-15 font-light nunito text-[#f28b00]">
                       {s.title.split(" ").map((word, idx) =>
                         idx === 1 ? (
                           <span key={idx} className="text-gray-800">
@@ -155,28 +155,28 @@ export default function HeroSlider({
                       )}
                     </h2>
 
-                    <p className="open-sans leading-[25px]  ml-15 text-[15px] text-[#919191] font-light">
+                    <p className="open-sans  ml-5 leading-[25px]  md:ml-15 text-[15px] text-[#919191] font-light">
                       {s.discription}
                     </p>
 
                     <div className="mt-8  relative flex items-center gap-6">
-                      <div className="bg-[#f28b00]  text-white font-semibold text-[28px] rounded-e-full px-20 py-2 inline-block shadow-sm">
+                      <div className="bg-[#f28b00]  text-white font-semibold text-[28px] rounded-e-full px-10 md:px-20 py-2 inline-block shadow-sm">
                         {s.price}
                       </div>
 
-                      <button className="rounded-full border  border-gray-300 px-[33px] py-[5px] cursor-pointer text-sm font-semibold hover:bg-gray-50 flex items-center gap-2">
+                      <button className="rounded-full border border-gray-300 px-[33px] py-[5px] cursor-pointer text-sm font-semibold hover:bg-gray-50 flex flex-nowrap items-center gap-2 whitespace-nowrap">
                         <span>Shop Now</span>
                         <span className="text-gray-400 text-3xl">&rarr;</span>
                       </button>
                     </div>
 
-                    <p className="mt-4  ml-15 text-gray-400 line-through">
+                    <p className="mt-4  ml-5 md:ml-15 text-gray-400 line-through">
                       {s.oldPrice}
                     </p>
                   </div>
 
                   <div className="w-1/2 relative flex items-center justify-end">
-                    <div className="max-w-[520px] relative w-[60%] mr-20 drop-shadow-2xl">
+                    <div className="max-w-[520px] md:flex hidden relative w-[60%] mr-20 drop-shadow-2xl">
                       <Image
                         src={s.image}
                         alt={s.title}
