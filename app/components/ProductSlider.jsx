@@ -255,6 +255,25 @@ const products = [
   },
 ];
 
+const resproduct = [
+  {
+    id: 1,
+    img: product1,
+    cat: "Laptops",
+    name: "Apple iPad Mini G2356",
+    old: "$2,999.00",
+    price: "$1,250.00",
+  },
+  {
+    id: 2,
+    img: product2,
+    cat: "Laptops",
+    name: "Apple iPad Mini G2356",
+    old: "$2,999.00",
+    price: "$1,250.00",
+  },
+];
+
 const chunkProducts = (arr, size) =>
   arr.reduce(
     (acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]),
@@ -278,7 +297,7 @@ export default function ProductSlider() {
       <div className="flex justify-between items-center py-1 border-b-1 border-[#e5e5e5]">
         <h2 className="text-[24px] font-[500] mb-5">Our Products</h2>
 
-        <div className="flex gap-3 mt-4 justify-end pr-5">
+        <div className="md:flex hidden gap-3 mt-4 justify-end pr-5">
           {slides.map((_, i) => (
             <div
               key={i}
@@ -297,7 +316,7 @@ export default function ProductSlider() {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden py-10">
+      <div className="relative w-full md:flex hidden overflow-hidden py-10">
         <div
           className="flex transition-all duration-500"
           style={{ transform: `translateX(-${active * 100}%)` }}
@@ -362,6 +381,57 @@ export default function ProductSlider() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="flex flex-col md:hidden">
+        {resproduct.map((item) => (
+          <div key={item.id} className="  mb-10">
+            <div className="h-[250px] flex items-center rounded-[10px] group">
+              <div>
+                <div className="flex items-center gap-4">
+                  <Image className="w-[40vw]" src={item.img} alt="products" />
+
+                  <div className="flex flex-col gap-2">
+                    <span className="text-[#919191] text-[13px]">
+                      {item.cat}
+                    </span>
+
+                    <span className="leading-[20px] text-[#484848] text-[16px] block w-[160px]">
+                      {item.name}
+                    </span>
+
+                    <div className="mt-1">
+                      <span className="text-[14px] line-through text-[#c5c5c5] block">
+                        {item.old}
+                      </span>
+                      <span className="text-[#f28b00] text-[21px] font-[600]">
+                        {item.price}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center  transition-all gap-5 mt-1">
+                  <div className="flex items-center gap-1">
+                    <div className="text-[#919191] text-[12px] font-[600] flex items-center gap-2">
+                      <GoGitCompare className="text-[16px]" />
+                      <span>Compare</span>
+                    </div>
+
+                    <div className="text-[#919191] text-[12px] font-[600] flex items-center gap-2">
+                      <CiHeart className="text-[16px]" />
+                      <span>Wishlist</span>
+                    </div>
+                  </div>
+
+                  <button className="flex bg-[#f92400] hover:bg-[#f28b00] transition-all text-white text-[14px] cursor-pointer font-[600] px-5 py-2 rounded-full">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -24,9 +24,9 @@ export default function page() {
       <Images />
       <Banner/>
       <NewProducts />
-{/*       <ProductSlider />
+      <ProductSlider />
       <Modiles />
-      <Imagebox />
+{/*       <Imagebox />
       <MostSales />
       <More />
       <Footer/> */}

@@ -134,7 +134,8 @@ export default function NewProducts() {
 
       <div className="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {filter.map((item, index) => (
-          <div key={index} className="w-fit group m-auto">
+     <div key={index} className="group w-full m-auto">
+
             <div className="p-2 rounded-[8px]">
               <div>
                 <div className="w-[100%] relative flex justify-center">
