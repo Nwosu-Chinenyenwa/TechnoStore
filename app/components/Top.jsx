@@ -51,7 +51,6 @@ export default function Top() {
               <IoIosArrowDown />
             </span>
 
-            {/* translate translate */}
             <ul className={`absolute top-10 bg-white flex flex-col gap-1  m-auto rounded-[5px] p-2 shadow-sm z-10 ${myaccountOpen === 2 ? "translate-y-2 opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out z-10" : "opacity-0"}`}>
               <li className="cursor-pointer transition-all hover:text-[#f28b00]">English</li>
               <li className="cursor-pointer transition-all hover:text-[#f28b00]">Spanish</li>
