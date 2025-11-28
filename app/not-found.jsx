@@ -17,6 +17,7 @@ export default function notfound() {
     home: "/home",
     about: "/about",
     contact: "/contact",
+    faq:"/faq"
   };
 
   const handle = () => {
@@ -24,7 +25,7 @@ export default function notfound() {
 
     if (pages[value]) {
       route.push(pages[value]);
-    } else toast.error(`Could not find ${query}`);
+    } else toast.error(`404 page not found:${query}`);
   };
 
   return (

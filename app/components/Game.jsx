@@ -236,7 +236,7 @@ export default function Game() {
   }
 
   function handleContinue() {
-    router.push("/Home");
+    router.push("/home");
   }
 
   function startConfetti() {
