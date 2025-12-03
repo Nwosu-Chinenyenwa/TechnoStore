@@ -20,6 +20,10 @@ export default function notfound() {
     faq:"/faq",
     topcategories:"/topcategories",
     tracking:"/tracking",
+    blog:"/blogs",
+    brand:"/brands",
+    terms:"/terms",
+    cart:"/cart",
   };
 
   const handle = () => {

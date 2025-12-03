@@ -50,9 +50,9 @@ export default function Links() {
               About
             </li>
           </Link>
-          <Link href={"/brands"}>
+          <Link href={"/blogs"}>
             <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
-              Brands
+              Blogs
             </li>
           </Link>
           <li className="text-[14px] text-[#fefefe] border-r border-[#fec579] px-5 cursor-pointer">
