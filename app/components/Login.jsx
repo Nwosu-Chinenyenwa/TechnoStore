@@ -103,6 +103,9 @@ export default function Login() {
               >
                 {loading ? <Loader /> : "Login"}
               </button>
+              <h3 className="text-[#aaaaaa] text-[14px] cursor-pointer hover:text-[#f28b00] transition-all">
+                Lost your Password?
+              </h3>
             </div>
           </form>
         </div>

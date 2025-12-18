@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import arrow from "../../public/images/arrow-right.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function page() {
   const [email, setEmail] = useState("");
@@ -48,7 +49,7 @@ export default function page() {
       toast.error(error.message);
     } else {
       toast.success("Logged in!");
-      window.location.href = "myaccount"
+      window.location.href = "myaccount";
     }
 
     setLoading(false);
@@ -129,9 +130,11 @@ export default function page() {
                   >
                     {loading ? <Loader /> : "Login"}
                   </button>
-                  <h3 className="text-[#aaaaaa] text-[14px] cursor-pointer hover:text-[#f28b00] transition-all">
-                    Lost your Password?
-                  </h3>
+                  <Link href={"/forgotpassword"}>
+                    <h3 className="text-[#aaaaaa] text-[14px] cursor-pointer hover:text-[#f28b00] transition-all">
+                      Lost your Password?
+                    </h3>
+                  </Link>
                 </div>
               </form>
             </div>

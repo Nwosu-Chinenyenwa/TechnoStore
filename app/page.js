@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     const loader = setTimeout(() => {
       setload(false);
-    }, 1000);
+    }, 3000);
     return () => clearTimeout(loader);
   }, []);
 
@@ -74,8 +74,8 @@ export default function Home() {
       <section className="flex h-screen w-screen items-center justify-center">
         <div className="flex flex-col items-center gap-10">
           <Image className="w-[40vw] lg:w-[20vw]" src={logo} alt="Logo" />
-          <div className="w-[200px] h-1 rounded-full bg-black/20 overflow-hidden">
-            <div className="h-full w-full bg-[#f28b00] animate-pulse" />
+          <div className="w-[200px] h-1  rounded-full bg-black/20 overflow-hidden">
+            <div className="h-full w-full animate-loader  bg-[#f28b00] animate-pulse" />
           </div>
         </div>
       </section>
@@ -84,7 +84,8 @@ export default function Home() {
 
   return (
     <>
-    {showGame && <Game />}
+      {/*    {showGame && <Game />} */}
+      <Game />
     </>
   );
 }

@@ -26,46 +26,90 @@ export default function Profile({ user }) {
   const [saveSuccess, setSaveSuccess] = useState(null);
 
   const supabase = createClient(true);
-
+  
   async function handleUpload(e, type) {
     const file = e.target.files[0];
     if (!file) return;
 
+    console.log("Starting upload for user:", user?.id);
+
     const fileExt = file.name.split(".").pop();
     const fileName = `${user.id}-${type}-${Date.now()}.${fileExt}`;
-    const filePath = `${type}s/${fileName}`;
+    const bucketName = type === "avatar" ? "avatars" : "covers";
+    const filePath = fileName;
 
     try {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error("Not authenticated. Please sign in.");
+        return;
+      }
+
+      console.log("Session exists, user ID:", session.user.id);
+
       const { data, error: uploadError } = await supabase.storage
-        .from(type === "avatar" ? "avatars" : "covers")
-        .upload(filePath, file, { cacheControl: "3600", upsert: true });
+        .from(bucketName)
+        .upload(filePath, file, {
+          cacheControl: "3600",
+          upsert: true,
+        });
 
-      if (uploadError) throw uploadError;
+      if (uploadError) {
+        console.error("Storage upload error:", uploadError);
+        throw uploadError;
+      }
 
-      const { publicUrl, error: urlError } = supabase.storage
-        .from(type === "avatar" ? "avatars" : "covers")
-        .getPublicUrl(filePath);
+      console.log("File uploaded successfully:", data);
 
-      if (urlError) throw urlError;
+      const {
+        data: { publicUrl },
+      } = supabase.storage.from(bucketName).getPublicUrl(filePath);
 
-      const updateData =
-        type === "avatar"
-          ? { avatar_url: publicUrl }
-          : { cover_url: publicUrl };
-      const { error: profileError } = await supabase
+      console.log("Public URL:", publicUrl);
+
+      const updateData = {
+        id: user.id,
+        [type === "avatar" ? "avatar_url" : "cover_url"]: publicUrl,
+        updated_at: new Date().toISOString(),
+      };
+
+      console.log("Attempting to update profile with:", updateData);
+
+      const { data: profileData, error: profileError } = await supabase
         .from("profiles")
-        .update(updateData)
-        .eq("id", user.id);
+        .upsert(updateData, {
+          onConflict: "id",
+          ignoreDuplicates: false,
+        })
+        .select();
 
-      if (profileError) throw profileError;
+      if (profileError) {
+        console.error("Profile upsert error details:", {
+          message: profileError.message,
+          code: profileError.code,
+          details: profileError.details,
+          hint: profileError.hint,
+        });
 
-      setProfile((prev) => ({ ...prev, ...updateData }));
+        toast.error(`Update failed: ${profileError.message}`);
+        return;
+      }
+
+      console.log("Profile updated successfully:", profileData);
+
+      setProfile((prev) => ({
+        ...prev,
+        [type === "avatar" ? "avatar_url" : "cover_url"]: publicUrl,
+      }));
+
       toast.success(
         `${type === "avatar" ? "Profile" : "Cover"} image updated!`
       );
     } catch (err) {
-      console.error("Upload error", err);
-      toast.error("Failed to upload image");
+      console.error("Full upload error:", err);
+      toast.error(`Upload failed: ${err.message || "Unknown error"}`);
     }
   }
 
@@ -409,7 +453,7 @@ export default function Profile({ user }) {
               </p>
             </div>
 
-            <div className="p-6 space-y-6">
+            <div className="md:p-6 p-3 space-y-6">
               <h4 className="text-[#333333] font-[400]  mb-3">
                 Change Password
               </h4>

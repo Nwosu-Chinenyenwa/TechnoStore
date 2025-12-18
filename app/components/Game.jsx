@@ -9,7 +9,7 @@ import pro2 from "../../public/images/02.jpg";
 import pro3 from "../../public/images/03.jpg";
 import pro4 from "../../public/images/04.jpg";
 import pro5 from "../../public/images/05.jpg";
-import pro6 from "../../public/images/06.jpg";
+import pro6 from "../../public/images/14.jpg";
 import { createClient } from "@/utils/supabase/client";
 
 export default function Game() {
@@ -29,12 +29,12 @@ export default function Game() {
   const imageCache = useRef({});
 
   const prizeLabels = [
-    "AWPods",
-    "Voucher",
-    "Free Data",
-    "Phone",
-    "$50",
-    "Food Coupon",
+    "HP laptop",
+    "Drone",
+    "Headphone",
+    "2 Game controller",
+    "MacBook Pro",
+    "Smartwatch",
   ];
 
   const prizes = [
@@ -49,7 +49,6 @@ export default function Game() {
   const size = 420;
 
   function generateUUID() {
-    // simple RFC4122 v4-ish UUID (good enough client-side)
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
       const r = (Math.random() * 16) | 0;
       const v = c === "x" ? r : (r & 0x3) | 0x8;
@@ -365,7 +364,7 @@ export default function Game() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       <Image className="w-[40vw] lg:w-[20vw]" src={logo} alt="logo" />
       <h1 className="text-[#2d2d2d] text-[25px] font-[400] py-2">
-        Lucky Spinner
+       😂😂 Lucky Spinner
       </h1>
 
       {!imagesLoaded && (

@@ -17,20 +17,21 @@ export default function notfound() {
     home: "/home",
     about: "/about",
     contact: "/contact",
-    faq:"/faq",
-    topcategories:"/topcategories",
-    tracking:"/tracking",
-    blog:"/blogs",
-    brand:"/brands",
-    terms:"/terms",
-    cart:"/cart",
-    checkout:"/checkout",
-    login:"login",
-    signup:"/myaccount",
-    myaccount:"/myaccount",
+    faq: "/faq",
+    topcategories: "/topcategories",
+    tracking: "/tracking",
+    blog: "/blogs",
+    brand: "/brands",
+    terms: "/terms",
+    cart: "/cart",
+    checkout: "/checkout",
+    login: "login",
+    signup: "/myaccount",
+    myaccount: "/myaccount",
   };
 
-  const handle = () => {
+  const handle = (e) => {
+    e.preventDefault()
     const value = query.toLowerCase().trim();
 
     if (pages[value]) {
@@ -67,7 +68,10 @@ export default function notfound() {
               </p>
             </div>
             <div className="border-2 border-dotted w-[80vw] md:w-[60vw] lg:w-[50vw]  border-[#e5e5e5] rounded-[10px] pt-[63px] pb-[59px] mt-[44px] mb-[32px] text-center">
-              <div className="flex flex-wrap gap-5 md:gap-0 justify-center items-center">
+              <form
+                onSubmit={handle}
+                className="flex flex-wrap gap-5 md:gap-0 justify-center items-center"
+              >
                 <input
                   value={query}
                   onChange={(e) => setquery(e.target.value)}
@@ -76,12 +80,12 @@ export default function notfound() {
                   placeholder="Search"
                 />
                 <button
-                  onClick={handle}
+                  type="submit"
                   className="inline-block rounded-full cursor-pointer text-white font-sans bg-[#2d2d2d] h-[40px] leading-[40px] text-[13px] px-[52px] font-normal relative overflow-hidden z-3"
                 >
                   Search
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
